@@ -6,7 +6,7 @@ export default function Projects() {
         <main className="flex flex-col w-full items-center">
             <section className="flex flex-col w-[900px]">
                 <section className="flex flex-col w-full my-[30px]">
-                    <h3 className="text-xl">Check out some of my work 🧠</h3>
+                    <h3 className="text-xl">Check out some of my work{` 🧠`}</h3>
                 </section>
 
                 <div className="grid grid-cols-3 gap-3">
