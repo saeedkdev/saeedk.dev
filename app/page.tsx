@@ -6,9 +6,9 @@ export default function Home() {
     <main className="flex flex-col w-full items-center">
         <section className="flex flex-col w-[900px]">
             <section className="flex flex-col w-full mt-[30px]">
-                <h3 className="text-xl">hey, I'm <span className="font-bold">Saeed</span>{` 👋`}</h3>
+                <h3 className="text-xl">hey, I{`'`}m <span className="font-bold">Saeed</span>{` 👋`}</h3>
                 <p className="mt-[20px]">
-                a software engineer driven by a passion for excellence, innovation, and efficient problem-solving. Let's connect and explore the possibilities of what we can achieve together. 🚀
+                a software engineer driven by a passion for excellence, innovation, and efficient problem-solving. Let{`'`}s connect and explore the possibilities of what we can achieve together. 🚀
                 </p>
             </section>
             <section className="flex flex-col w-full my-[50px]">
