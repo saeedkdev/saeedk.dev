@@ -22,8 +22,8 @@ export default function RootLayout({
     <html lang="en">
         <body className={firaSans.className}>
         <main className="flex flex-col w-full items-center">
-            <section className="flex flex-col w-[900px]">
-                <div className="flex flex-row justify-between mt-[100px] w-full">
+            <section className="flex flex-col sm:w-10/12 md:w-[900px]">
+                <div className="flex flex-row justify-between mt-[100px] w-full px-5 md:px-0">
                     <Link href="https://github.com/saeedkdev" target='_blank' className='flex flex-row gap-1 rounded-md p-2 border 
                                 hover:border-gray-900
                                 hover:bg-gray-900 hover:text-white transition' >
@@ -34,7 +34,7 @@ export default function RootLayout({
                     </Link>
                 </div>
                 <hr className="w-full mt-5"/>
-                <nav className="flex flex-row justify-between w-[240px] max-w-2xl py-4">
+                <nav className="flex flex-row justify-between w-8/12 md:w-[240px] max-w-2xl py-4 px-5 md:px-0">
                     <Link href="/">
                         home
                     </Link>

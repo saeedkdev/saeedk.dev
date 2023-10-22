@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Projects() {
     return (
         <main className="flex flex-col w-full items-center">
-            <section className="flex flex-col w-[900px]">
+            <section className="flex flex-col w-11/12 md:w-[900px]">
                 <section className="flex flex-col w-full my-[30px]">
                     <h3 className="text-xl">Check out some of my work{` 🧠`}</h3>
                 </section>
