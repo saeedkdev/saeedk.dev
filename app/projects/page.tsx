@@ -4,13 +4,13 @@ import Link from 'next/link'
 export default function Projects() {
     return (
         <main className="flex flex-col w-full items-center">
-            <section className="flex flex-col w-11/12 md:w-[900px]">
+            <section className="flex flex-col w-11/12 md:w-[900px] mb-5">
                 <section className="flex flex-col w-full my-[30px]">
                     <h3 className="text-xl">Check out some of my work{` 🧠`}</h3>
                 </section>
 
-                <div className="grid grid-cols-3 gap-3">
-                    <div className="row-span-3 bg-white p-3 rounded-md border border-slate-200">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <div className="row-span-2 md:row-span-3 bg-white p-3 rounded-md border border-slate-200">
                         <h3 className="text-lg">Personal Blog</h3>
                         <p className="text-sm my-2">I maintain my personal blog, where I write articles on subjects that pique my interest.</p>
                         <p className="text-sm my-2">Developed using Next.js, a React framework, and Sanity, a headless CMS.</p>
@@ -50,7 +50,7 @@ of tools and technologies to streamline operations and improve efficiency.</p>
                             Github repo
                         </Link>
                     </div>
-                    <div className="col-span-2 bg-white p-3 rounded-md border border-slate-200">
+                    <div className="col-span-1 md:col-span-2 bg-white p-3 rounded-md border border-slate-200">
                         <h3 className="text-lg">EventBase API</h3>
                         <p className="text-sm my-2">A RESTful API for a fictional event management system.</p>
                         <p className="text-sm my-2">Developed using Laravel, a PHP framework and MySQL database.</p>
