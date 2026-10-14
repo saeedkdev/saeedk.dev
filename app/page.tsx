@@ -1,119 +1,60 @@
-import Image from 'next/image'
 import Link from 'next/link'
+import ArticleList from '@/components/ArticleList'
 
 export default function Home() {
-    return (
-        <main className="flex flex-col w-full items-center">
-            <section className="flex flex-col w-11/12 md:w-[900px]">
-                <section className="flex flex-col w-full mt-[30px]">
-                    <h3 className="text-xl">hey, I{`'`}m <span className="font-bold">Saeed</span>{` 👋`}</h3>
-                    <p className="mt-[20px]">
-                        a software engineer driven by a passion for excellence, innovation, and efficient problem-solving. Let{`'`}s connect and explore the possibilities of what we can achieve together. 🚀
-                    </p>
-                </section>
-                <section className="flex flex-col w-full my-[50px]">
-                    <ol className="border-l border-neutral-300 ">
-                        <li>
-                            <div className="flex-start flex items-center pt-3">
-                                <div
-                                    className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 "></div>
-                                <p className="text-sm text-neutral-700 ">
-                                    Jan 2025 - Present
-                                </p>
-                            </div>
-                            <div className="mb-6 ml-4 mt-2">
-                                <h4 className="mb-1.5 text-xl font-semibold">Software Development Manager</h4>
-                                <h5 className="mb-1.5 text-sm">DMG Blockchain Solutions</h5>
-                                <p className="mb-3 text-neutral-700">
-                                    Work closely with executive leadership, product, and operations teams to synchronize engineering roadmaps with broader business strategies and client needs.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="flex-start flex items-center pt-3">
-                                <div
-                                    className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 "></div>
-                                <p className="text-sm text-neutral-700 ">
-                                    Nov 2023 - Dec 2024
-                                </p>
-                            </div>
-                            <div className="mb-6 ml-4 mt-2">
-                                <h4 className="mb-1.5 text-xl font-semibold">Senior Software Engineer</h4>
-                                <h5 className="mb-1.5 text-sm">DMG Blockchain Solutions</h5>
-                                <p className="mb-3 text-neutral-700">
-                                    Led the development of a secure and scalable crypto custody solution, enabling secure storage and management of digital assets for clients.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="flex-start flex items-center pt-3">
-                                <div
-                                    className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 "></div>
-                                <p className="text-sm text-neutral-700 ">
-                                    Apr 2022 - Oct 2023
-                                </p>
-                            </div>
-                            <div className="mb-6 ml-4 mt-2">
-                                <h4 className="mb-1.5 text-xl font-semibold">Lead Software Engineer</h4>
-                                <h5 className="mb-1.5 text-sm">General Internet</h5>
-                                <p className="mb-3 text-neutral-700">
-                                    Refactored and modularized core features of the base software, enabling seamless integration into a scalable and customizable SaaS solution.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="flex-start flex items-center pt-3">
-                                <div
-                                    className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 "></div>
-                                <p className="text-sm text-neutral-700 ">
-                                    Mar 2021 - Apr 2022
-                                </p>
-                            </div>
-                            <div className="mb-6 ml-4 mt-2">
-                                <h4 className="mb-1.5 text-xl font-semibold">Software Engineer</h4>
-                                <h5 className="mb-1.5 text-sm">General Internet</h5>
-                                <p className="mb-3 text-neutral-700 ">
-                                    Developed and implemented a user-friendly Documentation module within the internal software, resulting in improved collaboration and knowledge sharing among the development team.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="flex-start flex items-center pt-3">
-                                <div
-                                    className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 "></div>
-                                <p className="text-sm text-neutral-700 ">
-                                    Nov 2018 - Mar 2021
-                                </p>
-                            </div>
-                            <div className="mb-6 ml-4 mt-2">
-                                <h4 className="mb-1.5 text-xl font-semibold">Software/Web Developer</h4>
-                                <h5 className="mb-1.5 text-sm">Self-Employed</h5>
-                                <p className="mb-3 text-neutral-700 ">
-                                    Developed a robust and user-friendly appointment scheduling system using NodeJS, MongoDB, and
-                                    React, resulting in improved efficiency and seamless appointment management for clients.
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div className="flex-start flex items-center pt-3">
-                                <div
-                                    className="-ml-[5px] mr-3 h-[9px] w-[9px] rounded-full bg-neutral-300 "></div>
-                                <p className="text-sm text-neutral-700 ">
-                                    May 2016 - Jun 2018
-                                </p>
-                            </div>
-                            <div className="mb-6 ml-4 mt-2">
-                                <h4 className="mb-1.5 text-xl font-semibold">Web Developer</h4>
-                                <h5 className="mb-1.5 text-sm">Pars Informatic</h5>
-                                <p className="mb-3 text-neutral-700 ">
-                                    Implemented a customized e-commerce solution using Laravel, resulting in a seamless online retail
-                                    experience for customers and a signicant increase in customer engagement metrics.
-                                </p>
-                            </div>
-                        </li>
-                    </ol>
-                </section>
-            </section>
-        </main>
-    )
+  return (
+    <>
+      <section className="intro" aria-labelledby="intro-title">
+        <p className="eyebrow">Software, product & teams · Vancouver, BC</p>
+        <h1 id="intro-title">Saeed Karimi<span className="name-period">.</span></h1>
+        <p className="intro-copy">I build software products and lead the teams behind them.</p>
+        <p className="intro-detail">
+          These days, that means digital-asset custody at DMG. This is a place for
+          my work, my writing, and what I learn along the way.
+        </p>
+        <a className="text-link" href="#current">What I’m working on <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section className="section" id="current" aria-labelledby="current-title">
+        <p className="eyebrow">Current work</p>
+        <h2 id="current-title">Building at DMG</h2>
+        <div className="prose">
+          <p>
+            I’m a Software Development Manager at{' '}
+            <a href="https://www.dmgblockchain.com/">DMG Blockchain Solutions</a>,
+            working with engineering, product, and operations to connect the
+            software we build with the people who need it.
+          </p>
+          <p>
+            My work includes <a href="https://www.numis-trust.com/">Numis Trust</a>,
+            a digital-asset custody platform. I joined DMG as a senior software
+            engineer in 2023, leading development of a custody solution, and now
+            lead software development.
+          </p>
+        </div>
+        <Link className="text-link" href="/projects">More about my work <span aria-hidden="true">→</span></Link>
+      </section>
+
+      <section className="section" id="writing" aria-labelledby="writing-title">
+        <div className="section-heading">
+          <p className="eyebrow">Writing</p>
+          <Link className="quiet-link" href="/writing">More writing <span aria-hidden="true">→</span></Link>
+        </div>
+        <h2 id="writing-title">Notes from the work</h2>
+        <p className="section-intro">On software, the choices behind it, and how we work together.</p>
+        <ArticleList />
+      </section>
+
+      <section className="section closing" id="contact" aria-labelledby="contact-title">
+        <p className="eyebrow">Elsewhere</p>
+        <h2 id="contact-title">Find me around the web</h2>
+        <p>
+          I’m based in Vancouver. Beyond the projects and writing here, I share
+          a little of my life as a software engineer on{' '}
+          <a href="https://www.youtube.com/@skdev11">YouTube</a>.
+        </p>
+        <p>You can also find me on <a href="https://github.com/saeedkdev">GitHub</a> and <a href="https://medium.com/@sk.dev">Medium</a>. Say hello.</p>
+      </section>
+    </>
+  )
 }

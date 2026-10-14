@@ -1,65 +1,64 @@
-import Image from 'next/image'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
-export default function Projects() {
-    return (
-        <main className="flex flex-col w-full items-center">
-            <section className="flex flex-col w-11/12 md:w-[900px] mb-5">
-                <section className="flex flex-col w-full my-[30px]">
-                    <h3 className="text-xl">Check out some of my work{` 🧠`}</h3>
-                </section>
+export const metadata: Metadata = {
+  title: 'Work',
+  description: 'Saeed Karimi’s work in software development, engineering leadership, and digital-asset custody at DMG Blockchain Solutions.',
+}
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                    <div className="row-span-2 md:row-span-3 bg-white p-3 rounded-md border border-slate-200">
-                        <h3 className="text-lg">Personal Blog</h3>
-                        <p className="text-sm my-2">I maintain my personal blog, where I write articles on subjects that pique my interest.</p>
-                        <p className="text-sm my-2">Developed using Next.js, a React framework, and Sanity, a headless CMS.</p>
-                        <Link href="https://blog.saeedk.dev" target='_blank' className="text-sm text-blue-500 pr-4">
-                            Visit blog
-                        </Link>
-                        <Link href="https://github.com/saeedkdev/skdev_blog" target='_blank' className="text-sm text-blue-500">
-                            Github repo
-                        </Link>
-                        <Image className="rounded-md mt-8" src="/avatar.png" width={300} height={200} alt='saeed'/>
-                    </div>
-                    <div className="row-span-2 bg-white p-3 rounded-md border border-slate-200">
-                        <h3 className="text-lg">Nabz</h3>
-                        <p className="text-sm my-2">A music streaming app inspired by Spotify.</p>
-                        <p className="text-sm my-2">Utilizing a combination of TypeScript, NextJS, Supabase</p>
-                        <Link href="https://nabz.saeedk.dev" target='_blank' className="text-sm text-blue-500 pr-4">
-                            Visit app
-                        </Link>
-                        <Link href="https://github.com/saeedkdev/nabz" target='_blank' className="text-sm text-blue-500">
-                            Github repo
-                        </Link>
-                        <Image className="rounded-md mt-8" src="/nabz.png" width={300} height={200} alt='saeed'/>
-                    </div>
-                    <div className="bg-white p-3 rounded-md border border-slate-200">
-                        <h3 className="text-lg">BusinessOS</h3>
-                        <p className="text-sm my-2">A comprehensive business management system, utilizing a wide range
-of tools and technologies to streamline operations and improve efficiency.</p>
-                        <Link href="https://businessos.ca" target='_blank' className="text-sm text-blue-500 pr-4">
-                            Visit
-                        </Link>
-                    </div>
-                    <div className="bg-white p-3 rounded-md border border-slate-200">
-                        <h3 className="text-lg">Raven Chat</h3>
-                        <p className="text-sm my-2">A real-time chat application, with Google authentication and a sleek UI.</p>
-                        <p className="text-sm my-2">Developed using Next.js, a React framework, and Firebase.</p>
-                        <Link href="https://github.com/saeedkdev/raven-chat" target='_blank' className="text-sm text-blue-500">
-                            Github repo
-                        </Link>
-                    </div>
-                    <div className="col-span-1 md:col-span-2 bg-white p-3 rounded-md border border-slate-200">
-                        <h3 className="text-lg">EventBase API</h3>
-                        <p className="text-sm my-2">A RESTful API for a fictional event management system.</p>
-                        <p className="text-sm my-2">Developed using Laravel, a PHP framework and MySQL database.</p>
-                        <Link href="https://github.com/saeedkdev/events_api" target='_blank' className="text-sm text-blue-500">
-                            Github repo
-                        </Link>
-                    </div>
-                </div>      
-            </section>
-        </main>
-    )
+export default function Work() {
+  return (
+    <>
+      <header className="page-intro">
+        <p className="eyebrow">Work</p>
+        <h1>Building products.<br />Leading teams.</h1>
+        <p className="intro-copy">My work spans software engineering, product, and the people doing the building.</p>
+      </header>
+
+      <section className="work-entry" aria-labelledby="dmg-title">
+        <p className="eyebrow">2023 — Present</p>
+        <h2 id="dmg-title">DMG Blockchain Solutions</h2>
+        <div className="prose">
+          <p>
+            I joined DMG as a Senior Software Engineer in November 2023, leading
+            development of a digital-asset custody solution. Since January 2025,
+            I’ve been a Software Development Manager.
+          </p>
+          <p>
+            I work with executive leadership, product, and operations to align
+            engineering work with business needs. That means working across
+            the product and the team, as well as the code.
+          </p>
+        </div>
+        <a className="text-link" href="https://www.dmgblockchain.com/">About DMG <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section className="work-entry" aria-labelledby="numis-title">
+        <p className="eyebrow">Digital-asset custody</p>
+        <h2 id="numis-title">Numis Trust</h2>
+        <div className="prose">
+          <p>
+            My work at DMG includes engineering and product work on Numis Trust,
+            a digital-asset custody platform. The public Numis site is the place
+            to learn more about the platform.
+          </p>
+        </div>
+        <a className="text-link" href="https://www.numis-trust.com/">Visit Numis Trust <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section className="work-entry" aria-labelledby="earlier-title">
+        <p className="eyebrow">Before DMG</p>
+        <h2 id="earlier-title">Business software & the web</h2>
+        <div className="prose">
+          <p>
+            At General Internet, I worked as a Software Engineer and then a Lead
+            Software Engineer, developing documentation tools and modularizing
+            software for a customizable SaaS product.
+          </p>
+          <p>Earlier work included appointment scheduling with Node.js and React, and e-commerce with Laravel.</p>
+        </div>
+        <Link className="text-link" href="/about">My full background <span aria-hidden="true">→</span></Link>
+      </section>
+    </>
+  )
 }
